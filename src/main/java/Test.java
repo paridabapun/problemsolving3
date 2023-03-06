@@ -1,8 +1,21 @@
 
 public class Test {
+	
+	 static void fun(int[]arr) {
+
+	       arr[3] = 98;
+
+	       return;
+
+	   }
 
 	
 	public static void main(String[] args) {
-		System.out.println("Hello git ");
+		
+		 int[]arr = {10,20,30,40,50};
+
+	       fun(arr);
+
+	       System.out.println(arr[3]);
 	}
 }
