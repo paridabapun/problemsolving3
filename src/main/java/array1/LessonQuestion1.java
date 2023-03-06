@@ -3,7 +3,7 @@ package array1;
 
 //GIVEN an array of n elements, find the no of elements in the array such that the array has atleast one element that is greater than it.
 
-public class LessonQuestion {
+public class LessonQuestion1 {
 
 	public int solve(int[] A) {
 		
