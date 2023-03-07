@@ -1,7 +1,9 @@
-package array1;
+package array37;
 
-//Reverse an array of size n using constant extra space	 space
-public class LessonQuestion3 {
+//Given an array ofsize n reverse the elements in [S , E]using constant extra  space.
+
+// 0 <= S <=E<=n-1
+public class LessonQuestion4 {
 
 	 public int[] solve(final int[] A) {
 

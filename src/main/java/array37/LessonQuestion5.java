@@ -1,4 +1,4 @@
-package array1;
+package array37;
 
 //Rotate an array in clockwise direction by k places (K < n) { Amazon Microsoft Adobe Ola, Directs}
 

@@ -1,4 +1,4 @@
-package array1;
+package array37;
 
 
 //GIVEN an array of n elements, find the no of elements in the array such that the array has atleast one element that is greater than it.
