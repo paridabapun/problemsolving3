@@ -1,7 +1,9 @@
 package arrayprefixsum38;
 /*
- *  Range Sum Query
-Problem Description
+ Q3. Range Sum Query
+
+
+roblem Description
 You are given an integer array A of length N.
 You are also given a 2D integer array B with dimensions M x 2, where each row denotes a [L, R] query.
 For each query, you have to find the sum of all elements from L to R indices in A (0 - indexed).
@@ -55,5 +57,26 @@ The sum of all elements of A[1 ... 2] = 2 + 2 = 4.
  * 
  */
 public class Assignment1 {
+	public long[] rangeSum(int[] A, int[][] B) {
 
+		long pref[] = new long[A.length];
+		pref[0] = A[0];
+		for (int i = 1; i < A.length; i++) {
+			pref[i] = pref[i - 1] + A[i];
+		}
+		long arr[] = new long[B.length];
+
+		for (int j = 0; j < B.length; j++) {
+			int l = B[j][0];
+			int r = B[j][1];
+			if (l == 0) {
+				arr[j] = pref[r];
+			} else {
+				arr[j] = pref[r] - pref[l - 1];
+
+			}
+
+		}
+		return arr;
+	}
 }
