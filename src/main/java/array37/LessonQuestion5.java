@@ -2,32 +2,38 @@ package array37;
 
 //Rotate an array in clockwise direction by k places (K < n) { Amazon Microsoft Adobe Ola, Directs}
 
+//BruteFORCE 
+
 public class LessonQuestion5 {
-	public static int[] solve(int[] A, int B) {
 
-		int n = A.length;
-		B = B % n;
-		reverse(A, n, 0, n - 1);
-		reverse(A, n, 0, B - 1);
-		reverse(A, n, B, n - 1);
+	public static void rotateArray(int[] arr, int k) {
+		int n = arr.length;
+		int[] newArr = new int[n];
 
-		return A;
+		// Copy the last k elements to the beginning of the new array
+		for (int i = 0; i < k; i++) {
+			newArr[i] = arr[n - k + i];
+		}
 
+		// Copy the remaining elements to the end of the new array
+		for (int i = k; i < n; i++) {
+			newArr[i] = arr[i - k];
+		}
+
+		// Assign the new array to the original array
+		for (int i = 0; i < n; i++) {
+			arr[i] = newArr[i];
+		}
 	}
 
-	public static int[] reverse(int A[], int n, int s, int e) {
+	public static void main(String[] args) {
 
-		int l = s;
-		int r = e;
-
-		while (l < r) {
-
-			int temp = A[l];
-			A[l] = A[r];
-			A[r] = temp;
-			l++;
-			r--;
+		int arr[] = { 1, 3, 2, 5, 6, 8, 9, 4 };
+		
+		rotateArray(arr, 2);
+		
+		for(int i =0; i < arr.length; i++) {
+			System.out.print(arr[i]+" ");
 		}
-		return A;
 	}
 }
