@@ -1,6 +1,7 @@
 package arrayprefixsum38;
 
 /*
+ * GIVEN n array element , count the total no of equilibrium indices . An index is said to be a equilibrium index if sum of elements to the left of i  == sum of elements to the right of i;
  * 
  */
 public class LessonQuestion2 {
