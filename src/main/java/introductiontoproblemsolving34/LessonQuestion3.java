@@ -21,13 +21,13 @@ public class LessonQuestion3 {
 	public static int sqrt1(int n) {
 
 		int i = 1;
-		int ans=0;
+		int ans = 0;
 		while (i * i <= n) {
-         ans = i;
-         if(i * i ==n) {
-        	 return ans;
-         }
-         i++;
+			ans = i;
+			if (i * i == n) {
+				return ans;
+			}
+			i++;
 		}
 
 		return -1;
@@ -38,7 +38,7 @@ public class LessonQuestion3 {
 
 		int n = sqrt(25);
 		System.out.println(n);
-		
+
 		int n1 = sqrt1(25);
 		System.out.println(n1);
 
