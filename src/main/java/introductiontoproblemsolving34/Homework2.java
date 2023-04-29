@@ -35,6 +35,8 @@ Explanation 2: There are no primes <= 1
  */
 public class Homework2 {
 
+	int solve(int A) {
+		
 	int count = 2;
 
 	int primeCount =0;
