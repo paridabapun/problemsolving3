@@ -4,12 +4,28 @@ package introtoarray37;
 
 public class LessonQuestion2 {
 
+	
+	//BruteForce
 	public boolean solve(int[] A, int B) {
 
 		for (int i = 0; i < A.length; i++) {
 			for (int j = 0; j < i; j++) {
 				if (A[i] + A[j] == B) {
 					return true;
+				}
+			}
+		}
+		return false;
+	}
+	//no of iteration reduced but not the TC
+	public boolean solve1(int[] A, int B) {
+
+		for (int i = 0; i < A.length; i++) {
+			for (int j = 0; j < i; j++) {
+				if(i != j) {
+				if (A[i] + A[j] == B) {
+					return true;
+				}
 				}
 			}
 		}
