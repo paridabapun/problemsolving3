@@ -1,4 +1,4 @@
-package array37;
+package introtoarray37;
 
 //7Given an array of size n and an integer k. Return True if there exists a fair (i j) s t(such that) ar[i] + ar[j] == k and i not eqal to j , else return false
 
