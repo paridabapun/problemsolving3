@@ -59,4 +59,28 @@ The sum of all elements of A[1 ... 2] = 2 + 2 = 4.
  */
 public class Homework4 {
 
+	public int[] solve(int[] A, int[][] B) {
+
+		// PREFIX ARRAY CREATED
+		int pref[] = new int[A.length];
+		pref[0] = A[0];
+		for (int i = 1; i < A.length; i++) {
+			pref[i] = pref[i - 1] + A[i];
+		}
+		int n = B.length;
+		int arr[] = new int[B.length];
+
+		for (int j = 0; j < n; j++) {
+			int l = B[j][0];
+			int r = B[j][1];
+			if (l == 0) {
+				arr[j] = pref[r];
+			} else {
+				arr[j] = pref[r] - pref[l - 1];
+
+			}
+
+		}
+		return arr;
+	}
 }
