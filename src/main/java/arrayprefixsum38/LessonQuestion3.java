@@ -1,33 +1,41 @@
 package arrayprefixsum38;
 
 /*
- * 
+ * GIVEN n element , q querire . Each queries --> [l,r]. Fin d the count of all the even numbers in the range [l,r]
  */
 public class LessonQuestion3 {
 
-	public int solve(int[] A) {
+	public int[] countEven(int[] A, int q) {
 		int n = A.length;
-		int pref[] = new int[A.length];
-		pref[0] = A[0];
+		int pcount[] = new int[n];
 
-		for (int i = 1; i < A.length; i++) {
-			pref[i] = pref[i - 1] + A[i];
+		if (A[0] % 2 == 0) {
+			pcount[0] = 1;
+		} else {
+			pcount[0] = 0;
 		}
-		int count = 0;
-		for (int i = 0; i < A.length; i++) {
-			if (i == 0) {
-				if (pref[n - 1] - pref[i] == 0) {
-					count++;
-				}
-			}
 
-			else {
-			}
-			if (pref[i - 1] == pref[n - 1] - pref[i]) {
-				count++;
+		for (int i = 1; i < n; i++) {
+			if (A[i] % 2 == 0) {
+				pcount[i] = 1 + pcount[i - 1];
+			} else {
+				pcount[i] = pcount[i - 1];
 			}
 		}
-		return count;
+
+		int ans[] = new int[q];
+		for (int i = 0; i < q; i++) {
+			// TODO - Input ned to be taken
+			int l = 0;
+			int r = 0;
+			// TODO END
+			if (l == 0) {
+				ans[i] = pcount[r];
+			} else {
+				ans[i] = pcount[r] - pcount[l - 1];
+			}
+
+		}
 
 	}
 }
