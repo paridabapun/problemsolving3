@@ -36,6 +36,7 @@ public class LessonQuestion3 {
 			}
 
 		}
+		return ans;
 
 	}
 }
