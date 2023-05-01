@@ -47,13 +47,12 @@ The prefix sum array of [4, 3, 2] is [4, 7, 9].
  * 
  */
 public class Assignment2 {
-	 public int[] solve(int[] A) {
+	public int[] solve(int[] A) {
+		int n = A.length;
 
-	        int pref[]=new int[A.length];
-	        pref[0]=A[0];
-	        for(int i =1; i < A.length;i++){
-	            pref[i] = pref[i-1]+A[i];
-	        }
-	        return pref;
-	    }
+		for (int i = 1; i < n; i++) {
+			A[i] = A[i - 1] + A[i];
+		}
+		return A;
 	}
+}

@@ -57,26 +57,30 @@ The sum of all elements of A[1 ... 2] = 2 + 2 = 4.
  * 
  */
 public class Assignment1 {
-	public long[] rangeSum(int[] A, int[][] B) {
+	  public long[] rangeSum(int[] A, int[][] B) {
 
-		long pref[] = new long[A.length];
-		pref[0] = A[0];
-		for (int i = 1; i < A.length; i++) {
-			pref[i] = pref[i - 1] + A[i];
-		}
-		long arr[] = new long[B.length];
 
-		for (int j = 0; j < B.length; j++) {
-			int l = B[j][0];
-			int r = B[j][1];
-			if (l == 0) {
-				arr[j] = pref[r];
-			} else {
-				arr[j] = pref[r] - pref[l - 1];
+
+			// PREFIX ARRAY CREATED
+			long pref[] = new long[A.length];
+			pref[0] = A[0];
+			for (int i = 1; i < A.length; i++) {
+				pref[i] = pref[i - 1] + A[i];
+			}
+			int n = B.length;
+			long arr[] = new long[B.length];
+
+			for (int j = 0; j < n; j++) {
+				int l = B[j][0];
+				int r = B[j][1];
+				if (l == 0) {
+					arr[j] = pref[r];
+				} else {
+					arr[j] = pref[r] - pref[l - 1];
+
+				}
 
 			}
-
+			return arr;
 		}
-		return arr;
 	}
-}
