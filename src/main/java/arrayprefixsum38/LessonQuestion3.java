@@ -25,10 +25,10 @@ public class LessonQuestion3 {
 
 		int ans[] = new int[q];
 		for (int i = 0; i < q; i++) {
-			// TODO - Input ned to be taken
+			//  - Input need to be taken
 			int l = 0;
 			int r = 0;
-			// TODO END
+			//  END
 			if (l == 0) {
 				ans[i] = pcount[r];
 			} else {

@@ -52,6 +52,16 @@ All elements are greater than B, which means we cannot select any subarray.
 Hence, the answer is 0. */
 public class Assignment2 {
 
-	 public int maxSubarray(int A, int B, int[] C) {
-	    }
+	public int maxSubarray(int A, int B, int[] C) {
+
+		int result = 0;
+		for (int i = 0; i < A; i++) {
+			int sum = 0;
+			for (int j = i; j < A; j++) {
+				sum += C[i];
+				result = Math.max(result, sum);
+			}
+		}
+		return result;
 	}
+}

@@ -70,6 +70,7 @@ public class Homework5 {
 	public int solve(int[] A, int B) {
 		  //SLIDING window approach , need to checkit once 
         // https://pastebin.com/dvv3Zm6C
+		//TODO have to check SLINDING WINDOW
 		    int n = A.length;
         int cur = 0;
         for(int i = 0; i < B; i++){
