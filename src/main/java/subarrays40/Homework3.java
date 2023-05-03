@@ -61,7 +61,7 @@ Explanation 2:
 public class Homework3 {
 
 	public int solve(int[] A, int B) {
-
+//BF
 		 int n = A.length;
 			int count = 0;
 			for (int i = 0; i < n; i++) {
@@ -80,4 +80,24 @@ public class Homework3 {
 			}
 			return count;
 		}
+	
+	public int solve1(int[] A, int B) {
+		//OPTIMISED O(N*N)
+		int n = A.length;
+		int count = 0;
+		for (int i = 0; i < n; i++) {
+			int sum = 0;
+			for (int j = i; j < n; j++) {
+
+				sum += A[j];
+				if (sum < B) {
+					count++;
+				}
+
+			}
+
+		}
+		return count;
 	}
+
+}
