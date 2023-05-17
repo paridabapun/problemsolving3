@@ -93,7 +93,7 @@ public class Homework1 {
 			for(int i =0; i < arrayList.size() ; i++) {
 				ans[i]=arrayList.get(i);
 			}
-			return  ans
+			return  ans;
 			
 		}
 	}

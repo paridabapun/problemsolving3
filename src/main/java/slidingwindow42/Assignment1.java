@@ -1,4 +1,5 @@
 package slidingwindow42;
+
 /*
  * Q1. Subarray with given sum and length
  * Problem Description
