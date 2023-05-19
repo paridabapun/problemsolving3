@@ -1,10 +1,10 @@
 package slidingwindow42;
 
 /*
- * Q3. Spiral Order Matrix II
+ * 
+ * Q1. Subarray with least average
 
-
-Problem Description
+ * Problem Description
 Given an array of size N, find the subarray of size K with the least average.
 
 
@@ -50,9 +50,37 @@ among all subarrays of size 3.
 Explanation 2:
 
  Subarray between [4, 5] has minimum average
+ 
  */
 public class Homework1 {
-	
-	
 
+	public int solve(int[] A, int B) {
+
+		int N = A.length;
+        // SUM of the first SUB ARRAY
+		int sum = 0;
+		for (int i = 0; i < B; i++) {
+			sum += A[i];
+
+		}// O(k)
+		
+		
+		int ans = sum;
+		int s = 1;
+		int e = B;
+        int index =0;//we have to return the starting index
+		while (e < N) {//(O(n-k)
+			sum = sum - A[s - 1] + A[e];
+			if (sum < ans) {
+                index = s;
+				ans = sum;
+			}
+            
+			s++;
+			e++;
+		}
+		//O(n),  O(1) SC
+
+		return index;
+	}
 }
