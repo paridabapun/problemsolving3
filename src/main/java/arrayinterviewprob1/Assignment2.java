@@ -1,4 +1,4 @@
-package arrayinterviewprob1;
+	package arrayinterviewprob1;
 
 public class Assignment2 {
 
