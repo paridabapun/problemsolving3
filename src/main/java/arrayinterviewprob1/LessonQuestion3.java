@@ -46,7 +46,7 @@ public class LessonQuestion3 {
 					r++;
 				}
 			}
-				ans += l * r;
+			ans += l * r;
 
 		}
 
